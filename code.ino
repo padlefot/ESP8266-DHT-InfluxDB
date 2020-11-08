@@ -12,7 +12,7 @@
 #define WIFI_SSID "some"              //Enter SSID of your WIFI Access Point
 #define WIFI_PASS "wifi"              //Enter Password of your WIFI Access Point
 #define DHTTYPE DHT11                 //Define the sensor model type: DHT 11, DHT22 or DHT21
-#define DHT_DPIN 2                    //Define GPIO pin for data (for nodeMCU PIN2 is GPIO D4)
+#define DHT_DPIN 2                    //Define GPIO pin for data (for nodeMCU ESP8266 PIN2 is GPIO D4)
 //Start Setup
 ESP8266WiFiMulti WiFiMulti;
 Influxdb influx(INFLUXDB_HOST);
