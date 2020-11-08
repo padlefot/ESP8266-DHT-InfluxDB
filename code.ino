@@ -7,10 +7,10 @@
 #define INFLUXDB_HOST "192.168.1.8"   //Enter IP of device running Influx Database
 #define INFLUXDB_PORT "8086"          //Enter the port # of InfluxDB (This does nothing atm)
 #define INFLUXDB_DATABASE "sensors"   //Enter the Influx Database name
-#define INFLUXDB_USER "test"          //Enter the InfluxDatabase Username
-#define INFLUXDB_PASS "test"          //Enter the InfluxDatabase Password
-#define WIFI_SSID "some"            //Enter SSID of your WIFI Access Point
-#define WIFI_PASS "wifi"     //Enter Password of your WIFI Access Point
+#define INFLUXDB_USER "test"          //Enter the Influx Database Username
+#define INFLUXDB_PASS "test"          //Enter the Influx Database Password
+#define WIFI_SSID "some"              //Enter SSID of your WIFI Access Point
+#define WIFI_PASS "wifi"              //Enter Password of your WIFI Access Point
 #define DHTTYPE DHT11                 //Define the sensor model type: DHT 11, DHT22 or DHT21
 #define DHT_DPIN 2                    //Define GPIO pin for data (for nodeMCU PIN2 is GPIO D4)
 //Start Setup
