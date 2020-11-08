@@ -1,6 +1,6 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
-#include <InfluxDb.h> //https://github.com/tobiasschuerg/InfluxDB-Client-for-Arduino <-manually import
+#include <InfluxDb.h> // https://github.com/tobiasschuerg/InfluxDB-Client-for-Arduino <-manually import
 #include <DHT.h>
 //Define Variables
 #define ESP_DEVICENAME "dht-11-devel" //Name to display for device in Influx Database
