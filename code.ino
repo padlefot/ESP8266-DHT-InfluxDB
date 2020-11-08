@@ -30,7 +30,7 @@ void setup() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
   influx.setDbAuth (INFLUXDB_DATABASE, INFLUXDB_USER, INFLUXDB_PASS);
- // influx.setDB (INFLUXDB_DATABASE) //This can be used if auth is disabled on the database
+ // influx.setDb (INFLUXDB_DATABASE); // This can be used instead of the line above if auth is disabled on the database
   Serial.println("Setup/Boot Complete.");
   dht.begin();
 }
