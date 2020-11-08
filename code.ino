@@ -3,7 +3,7 @@
 #include <InfluxDb.h> //https://github.com/tobiasschuerg/InfluxDB-Client-for-Arduino <-manually import
 #include <DHT.h>
 //Define Variables
-#define ESP_DEVICENAME "dht-11-devel"       //Name to display for device in Influx Database
+#define ESP_DEVICENAME "dht-11-devel" //Name to display for device in Influx Database
 #define INFLUXDB_HOST "192.168.1.8"   //Enter IP of device running Influx Database
 #define INFLUXDB_PORT "8086"          //Enter the port # of InfluxDB (This does nothing atm)
 #define INFLUXDB_DATABASE "sensors"   //Enter the Influx Database name
