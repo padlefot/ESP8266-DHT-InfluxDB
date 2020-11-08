@@ -2,7 +2,7 @@
 #include <ESP8266WiFiMulti.h>
 #include <InfluxDb.h> // https://github.com/tobiasschuerg/InfluxDB-Client-for-Arduino <-manually import
 #include <DHT.h>
-//Define Variables
+//Define Some Stuff
 #define ESP_DEVICENAME "dht-11-devel" //Name to display for device in Influx Database
 #define INFLUXDB_HOST "192.168.1.8"   //Enter IP of device running Influx Database
 #define INFLUXDB_PORT "8086"          //Enter the port # of InfluxDB (This does nothing atm)
@@ -45,25 +45,25 @@ void loop() {
  
   }
 
- // create a measurement object for temperature
+ // Create a measurement object for temperature
 InfluxData measurement ("temperature");
 //measurement.addTag("device", d2);
 measurement.addTag("sensor", ESP_DEVICENAME);
 measurement.addValue("value", t);
 
-// write temperature measurement into db
+// Write temperature measurement into db
 influx.write(measurement);
 
- // create a measurement object for humidity
+ // Create a measurement object for humidity
 InfluxData measurement2 ("humidity");
 //measurement2.addTag("device", d2);
 measurement2.addTag("sensor", ESP_DEVICENAME);
 measurement2.addValue("value", h);
 
-// write humidity measurement into db
+// Write humidity measurement into db
 influx.write(measurement2);
   
-// print measurements to serial for visibility
+// Print measurements to serial for visibility
     Serial.print("Writing to InfluxDB = ");
     Serial.print(INFLUXDB_DATABASE);
     Serial.print(" @ ");
