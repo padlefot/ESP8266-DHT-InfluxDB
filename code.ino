@@ -1,9 +1,9 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
-#include <InfluxDb.h> // https://github.com/tobiasschuerg/InfluxDB-Client-for-Arduino only works with v1.2.0 or below
+#include <InfluxDb.h> // https://github.com/tobiasschuerg/InfluxDB-Client-for-Arduino (use version 3.0)
 #include <DHT.h>
 //Define Some Stuff
-#define ESP_DEVICENAME "dht-11-devel" //Name to display for device in Influx Database
+#define ESP_DEVICENAME "dht-11-test21112020" //Name to display for device in Influx Database
 #define INFLUXDB_HOST "192.168.1.8"   //Enter IP of device running Influx Database
 #define INFLUXDB_PORT "8086"          //Enter the port # of InfluxDB (This does nothing atm)
 #define INFLUXDB_DATABASE "sensors"   //Enter the Influx Database name
@@ -24,7 +24,7 @@ void setup() {
   Serial.print("Connecting to WIFI");
   while (WiFiMulti.run() != WL_CONNECTED) {
     Serial.print(".");
-    delay(1000);
+    delay(3000);
   }
   Serial.println("WiFi connected");
   Serial.println("IP address: ");
@@ -64,17 +64,17 @@ measurement2.addValue("value", h);
 influx.write(measurement2);
   
 // Print measurements to serial for visibility
-    Serial.print("Writing to InfluxDB = ");
-    Serial.print(INFLUXDB_DATABASE);
+    Serial.print("Writing to InfluxDB: ");
+    Serial.print(INFLUXDB_DATABASE );
     Serial.print(" @ ");
-    Serial.println(INFLUXDB_HOST);
- delay(5000);
+    Serial.println(INFLUXDB_HOST );
+    Serial.println("esp-device = " ESP_DEVICENAME );
     Serial.print("temperature = ");
     Serial.print(t); 
     Serial.println("C  ");
     Serial.print("humidity = ");
     Serial.print(h);
     Serial.println("%   ");
- delay(2000);
+    Serial.println("---");
+ delay(7000);
 }
-
