@@ -4,4 +4,4 @@ Can be flashed simply using the Arduino IDE.
 
 Caveat:
 
-Only works with older versions of <Influx.h> - tested with 1.2.0
+Only works with older versions of <Influx.h> due to NTP support in newer versions - tested with v3.0.
